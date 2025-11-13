@@ -1,0 +1,5 @@
+pandas
+fastparquet
+duckdb
+bs4
+requests
