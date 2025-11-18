@@ -18,5 +18,20 @@ The official Steam Community Market provides the median price and volume sold in
 
 ![image](./images/freq_dist_stickers.png)
 
+Here is the frequency distribution of stickers by rarity color. This is ordered in increasing rarity, so the results are what we expected. There are more blues than any other color because these are the most common stickers. There is actually a single gold sticker, that is of type `contraband`, and is the `Howling Dawn` sticker.
 
-## Issues/Questions
+![image](./images/iem_rio_2022.png)
+
+Here is an example distriubtion of volume of stickers sold during a tournament period as mentioed above. This was for `IEM Rio 2022`. On the left side, we see a light blue peak corresponding to the winners of the tournament, `Outsiders`. This example examples matches our hypothesis about being a measure of success in a tournmanet.
+
+![image](./images/iem_katowice_2019.png)
+Here's an example of the same distrubtion for another tournament period, `IEM Katowice 2019`. The winners of this tournament was team `Astralis`, with second place being team `ENCE`. This graph was a little more questionable than the previous. There is a very defined peak on the left-hand side of the graph that, yet the tallest line corresponds to `ENCE`. We need to look further into this, but our hypothesis is that as time approaches the final matches, sticker sales correspond to community predictions.
+
+![image](./images/pgl_copenhagen_2024.png)
+Lastly, here's an example of a distribution where predictions become very difficult. This was `PGL Copenhagen 2024`, where the winning team was `Natus Vincere`. We can see on the far left that there are two primary peaks that roughtly correspond to the top placing teams, including Natus, but after the tournament ends we still see these peaks occurring that don't correspond to any of htese top teams. Especially in around April of 2025, we see a large spike in sales for a team that did not even end up in the top 5. This tells us that when doing predictions, we will need to narrow our scope of time.
+
+
+## Issues/Open Questions
+The major issues we are having is related to actually retrieving data. For example, to obtaining the Steam Market Data required sending `GET` requests to the url mentioned earlier. However, Steam would time you out if you exceed their limit, which meant obtaining the data took a long time. Along with this, trying to find a way to obtain individual item data, such as sticker information (i.e. tournaments/teams if it applied) was a long process.
+
+Our next step is to obtain individual tournament data, such as player performance, player highlights, and player weapon skins to see if we can incorporate weapon skins into our predictions. Our hypothesis regarding that is that weapon skins that are seen during highlights may see an increase in sales during or shortly after a tournament.
