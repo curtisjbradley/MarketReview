@@ -6,3 +6,4 @@ requests
 ipykernel
 scikit-learn
 selenium
+matplotlib
