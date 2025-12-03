@@ -3,4 +3,7 @@ fastparquet
 duckdb
 bs4
 requests
-ipykernel 
+ipykernel
+scikit-learn
+selenium
+matplotlib
